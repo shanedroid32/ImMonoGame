@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using Num = System.Numerics;
 using ImMonoGame.Thing;
 
-namespace Prism.Engine
+namespace ImMonoGame.Thing
 {
     public class ImguiComponent
     {
