@@ -7,13 +7,12 @@ ImGui Entity: a simple object, with one virtual method that your UIObject is mea
 ImGui Component: abstracts ImGui rendering and handles update, drawing initialization and load content.
 Imgui Renderer & DrawVertDecleration: the main rendering code for ImMonoGame, generally best not to mess with it. From: https://github.com/mellinoe/ImGui.NET
 
-##sample code and intergration
+## sample code and intergration
 ```using ImGuiNET;
 using ImMonoGame.Thing;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
-using Prism.Engine;
 using System;
 using System.Collections.Generic;
 using Num = System.Numerics;
