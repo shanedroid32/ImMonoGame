@@ -36,7 +36,6 @@ namespace ImMonoGame
 
         protected override void Initialize()
         {
-            // TODO: Add your initialization logic here
             _graphics.PreferredBackBufferWidth = 1280;
             _graphics.PreferredBackBufferHeight = 720;
             _graphics.ApplyChanges();
@@ -49,16 +48,13 @@ namespace ImMonoGame
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
             UIEntity.Add(new ImGuiDemo(this.ImGui._imGuiTexture));
-            // TODO: use this.Content to load your game content here
+         
         }
 
         protected override void Update(GameTime gameTime)
         {
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
-
-            // TODO: Add your update logic here
-
             base.Update(gameTime);
         }
 
