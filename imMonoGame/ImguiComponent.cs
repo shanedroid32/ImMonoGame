@@ -83,22 +83,6 @@ namespace ImMonoGame.Thing
             return texture;
         }
 
-
-        public void UI()
-        {
-            ImGui.Begin("Test Window");
-            ImGui.SetWindowSize(new Num.Vector2(800, 600));
-            byte[] j = new byte[100000];
-            ImGui.InputText("Test", j, 100000);
-            ImGui.End();
-        }
-
-
-
-
-
-
-
     }
 
 }
