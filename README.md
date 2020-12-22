@@ -75,5 +75,5 @@ namespace ImMonoGame
 ```
 ## credits
 - ImGui.Net created by https://github.com/mellinoe/
-- ImGui created by https://github.com/ocornut/imgui/
-- MonoGame created by MonoGame (big suprise)
+- ImGui created by https://github.com/ocornut/
+- MonoGame created by https://github.com/MonoGame/
