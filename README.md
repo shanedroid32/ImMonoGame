@@ -1,5 +1,5 @@
 # ImMonoGame
-a small lightiwght library for ImGui.Net and MonoGame, with a basic UI Entity/Object type system. Reccomended for use when debugging projects.
+a small lightwieght library for ImGui.Net and MonoGame, with a basic UI Entity/Object type system. Reccomended for use when debugging projects.
 
 ## documentation
 
