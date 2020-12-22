@@ -13,8 +13,7 @@ namespace ImMonoGame.Thing
     {
         private Game _game;
         private GraphicsDevice _graphicsDevice;
-        const string fonts = "C:/Users/muham/source/repos/Skywards/engine/engine/imgui/fonts";
-
+        private string fonts = " ";
         private BasicEffect _effect;
         private RasterizerState _rasterizerState;
 
