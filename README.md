@@ -11,31 +11,3 @@ Imgui Renderer & DrawVertDecleration: the main rendering code for ImMonoGame, ge
 ImGui.Net created by https://github.com/mellinoe/
 ImGui created by https://github.com/ocornut/imgui/
 MonoGame created by MonoGame (big suprise)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#yo
