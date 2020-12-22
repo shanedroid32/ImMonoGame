@@ -8,7 +8,7 @@ a small lightweight library for ImGui.Net and MonoGame, with a basic UI Entity/O
 - Imgui Renderer & DrawVertDecleration: the main rendering code for ImMonoGame, generally best not to mess with it. From: https://github.com/mellinoe/ImGui.NET
 
 ## sample code and intergration
-### Demo Entity
+### ImGuiDemo Entity
 ```
 using System;
 using ImGuiNET;
