@@ -87,6 +87,7 @@ namespace ImMonoGame
         private SpriteBatch _spriteBatch;
         private ImguiComponent ImGui;
         private List<ImGuiEntity> UIEntity = new List<ImGuiEntity>();
+        private CoolTheme coolTheme = new CoolTheme();
   
         public SampleProject()
         {
@@ -94,6 +95,7 @@ namespace ImMonoGame
             ImGui = new ImguiComponent(_graphics, this, UIEntity);
             ImGui.Font = "font.ttf";
             ImGui.fontSize = 14f;
+            ImGui.Theme = coolTheme;
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
         }
