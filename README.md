@@ -6,6 +6,8 @@ a small lightweight library for ImGui.Net and MonoGame, with a basic UI Entity/O
 - ImGui Entity: a simple object, with one virtual method that your UIObject is meant to inherit, add all UI code/methods in to that method.
 - ImGui Component: abstracts ImGui rendering and handles update, drawing initialization and load content.
 - Imgui Renderer & DrawVertDecleration: the main rendering code for ImMonoGame, generally best not to mess with it. From: https://github.com/mellinoe/ImGui.NET
+- Themes: Class with virtual void called "initialize" put all you theme code in there.
+- texture2D_to_intPtr: Converts a Texture2D to an IntPtr which can then be used by ImGui for things like icons and image buttons.
 
 ## sample code and intergration
 ### ImGuiDemo Entity
@@ -90,6 +92,8 @@ namespace ImMonoGame
         {
             _graphics = new GraphicsDeviceManager(this);
             ImGui = new ImguiComponent(_graphics, this, UIEntity);
+            ImGui.Font = "font.ttf";
+            ImGui.fontSize = 14f;
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
         }
