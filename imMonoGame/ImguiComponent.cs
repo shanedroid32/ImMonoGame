@@ -17,6 +17,8 @@ namespace ImMonoGame.Thing
         private Game Game;
         private List<ImGuiEntity> UIEntities;
         public float fontSize = 14f;
+        public string Font = "";     
+        public Theme Theme;
 
         public ImguiComponent(GraphicsDeviceManager graphics, Game game, List<ImGuiEntity> Canvas)
         {
@@ -28,6 +30,10 @@ namespace ImMonoGame.Thing
         public void Initialize()
         {
             _imGuiRenderer = new ImGuiRenderer(Game);
+            if(Theme != null)
+            {
+                Theme.Initialize();
+            }
             _imGuiRenderer.RebuildFontAtlas();
         }
 
@@ -81,6 +87,12 @@ namespace ImMonoGame.Thing
             //set the color
             texture.SetData(data);
             return texture;
+        }
+
+        public static IntPtr texture2D_to_intPtr(Texture2D texture, ImguiComponent component)
+        {
+            var  _imGuiTexture = component._imGuiRenderer.BindTexture(texture);
+            return _imGuiTexture;
         }
 
     }
