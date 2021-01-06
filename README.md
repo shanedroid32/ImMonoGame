@@ -69,7 +69,7 @@ namespace ImMonoGame
 }
 
 ```
-### Game Class
+### game class
 ```using ImGuiNET;
 using ImMonoGame.Thing;
 using Microsoft.Xna.Framework;
