@@ -17,7 +17,7 @@ namespace ImMonoGame
             return color;
         }
 
-        public static Num.Vector4 ColorToHex(Color color)
+        public static Num.Vector4 ColorToVec4(Color color)
         {
             return new Num.Vector4(color.R / 255, color.G / 255, color.B / 255, 1f);
         }
