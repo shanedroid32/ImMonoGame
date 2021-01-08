@@ -15,7 +15,7 @@ namespace ImMonoGame.Thing
         private Texture2D _xnaTexture;
         public IntPtr _imGuiTexture;
         private Game Game;
-        private List<ImGuiEntity> UIEntities;
+        public List<ImGuiEntity> UIEntities;
         public float fontSize = 14f;
         public string Font = "";     
         public Theme Theme;
