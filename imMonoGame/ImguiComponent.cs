@@ -15,12 +15,12 @@ namespace ImMonoGame.Thing
         private Texture2D _xnaTexture;
         public IntPtr _imGuiTexture;
         private Game Game;
-        public List<ImGuiEntity> UIEntities;
+        public ImGuiEntity[] UIEntities;
         public float fontSize = 14f;
         public string Font = "";     
         public Theme Theme;
 
-        public ImguiComponent(GraphicsDeviceManager graphics, Game game, List<ImGuiEntity> Canvas)
+        public ImguiComponent(GraphicsDeviceManager graphics, Game game, ImGuiEntity[] Canvas)
         {
             this._graphics = graphics;
             this.Game = game;
@@ -62,6 +62,7 @@ namespace ImMonoGame.Thing
             // Draw our UI
             foreach (var Canvas in UIEntities)
             {
+                if(Canvas != null)
                 Canvas.UI();
             }
 

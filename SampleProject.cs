@@ -13,7 +13,7 @@ namespace ImMonoGame
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
         private ImguiComponent ImGui;
-        private List<ImGuiEntity> UIEntity = new List<ImGuiEntity>();
+        private ImGuiEntity[] UIEntity = new ImGuiEntity[1];
   
         public SampleProject()
         {
@@ -37,7 +37,7 @@ namespace ImMonoGame
         protected override void LoadContent()
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
-            UIEntity.Add(new ImGuiDemo(this.ImGui._imGuiTexture));
+            UIEntity[1] = new ImGuiDemo(this.ImGui._imGuiTexture);
             // TODO: use this.Content to load your game content here
         }
 
