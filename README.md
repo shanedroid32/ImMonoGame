@@ -109,7 +109,7 @@ namespace ImMonoGame
         protected override void LoadContent()
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
-            UIEntity[1] = new ImGuiDemo(this.ImGui._imGuiTexture);
+            UIEntity[0] = new ImGuiDemo(this.ImGui._imGuiTexture);
             // TODO: use this.Content to load your game content here
         }
 
