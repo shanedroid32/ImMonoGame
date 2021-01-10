@@ -18,7 +18,11 @@ namespace ImMonoGame
         public SampleProject()
         {
             _graphics = new GraphicsDeviceManager(this);
-            ImGui = new ImguiComponent(_graphics, this, UIEntity);
+            ImGui = new ImguiComponent(_graphics, this, UIEntity);     
+            //if you have a theme set the theme ->
+            //ImGui.Theme = CoolTheme;
+            ImGui.Font = @"Assets/font.ttf";
+            ImGui.fontSize = 8f;
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
         }
@@ -37,7 +41,7 @@ namespace ImMonoGame
         protected override void LoadContent()
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
-            UIEntity[1] = new ImGuiDemo(this.ImGui._imGuiTexture);
+            UIEntity[0] = new ImGuiDemo(this.ImGui._imGuiTexture);
             // TODO: use this.Content to load your game content here
         }
 

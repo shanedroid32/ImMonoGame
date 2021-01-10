@@ -34,6 +34,8 @@ namespace ImMonoGame.Thing
             {
                 Theme.Initialize();
             }
+            var io = ImGui.GetIO();
+            io.Fonts.AddFontFromFileTTF(Font, fontSize);
             _imGuiRenderer.RebuildFontAtlas();
         }
 
