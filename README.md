@@ -70,7 +70,7 @@ namespace ImMonoGame
 
 ```
 ### game class
-```using ImGuiNET;
+```
 using ImMonoGame.Thing;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
@@ -84,13 +84,17 @@ namespace ImMonoGame
     {
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
-        private ImguiComponent ImGui;
+        private ImguiComponent ImMonoGame;
         private ImGuiEntity[] UIEntity = new ImGuiEntity[1];
   
         public SampleProject()
         {
             _graphics = new GraphicsDeviceManager(this);
-            ImGui = new ImguiComponent(_graphics, this, UIEntity);
+            ImMonoGame = new ImguiComponent(_graphics, this, UIEntity);     
+            //if you have a theme set the theme ->
+            //ImGui.Theme = CoolTheme;
+            ImMonoGame.Font = @"Assets/font.ttf";
+            ImMonoGame.fontSize = 8f;
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
         }
@@ -101,15 +105,15 @@ namespace ImMonoGame
             _graphics.PreferredBackBufferWidth = 1280;
             _graphics.PreferredBackBufferHeight = 720;
             _graphics.ApplyChanges();
-            ImGui.Initialize();
-            ImGui.LoadContent();
+            ImMonoGame.Initialize();
+            ImMonoGame.LoadContent();
             base.Initialize();
         }
 
         protected override void LoadContent()
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
-            UIEntity[0] = new ImGuiDemo(this.ImGui._imGuiTexture);
+            UIEntity[0] = new ImGuiDemo(this.ImMonoGame._imGuiTexture);
             // TODO: use this.Content to load your game content here
         }
 
@@ -127,7 +131,7 @@ namespace ImMonoGame
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
-            ImGui.Draw(gameTime);
+            ImMonoGame.Draw(gameTime);
 
             base.Draw(gameTime);
         }
